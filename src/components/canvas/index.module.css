@@ -1,0 +1,71 @@
+.canvasContainer {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toolButton {
+    background-color: #f4f4f4;
+    /* Light background for default state */
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toolButtonActive {
+    color: #ffffff;
+    background-color: #98D6D6;
+    border: 2px solid #D6DBDC;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toolButton:hover {
+    color: #ffffff;
+    background-color: #98D6D6;
+}
+
+.upDownloadButton {
+    color: #000000;
+    background-color: #f0f0f0;
+    border: 2px solid #D6DBDC;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.upDownloadButton:hover {
+    color: #ffffff;
+    background-color: #98D6D6;
+}
+
+.colorSelector,
+.iconSelector {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #f0f0f0;
+    border: 2px solid #D6DBDC;
+    cursor: pointer;
+}
+
+.colorSelector:hover,
+.iconSelector:hover {
+    color: #ffffff;
+    background-color: #98D6D6;
+}

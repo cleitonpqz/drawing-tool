@@ -1,0 +1,29 @@
+.colorTool {
+    display: inline-block;
+    position: relative;
+}
+
+.colorDropdown {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.colorOption {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.colorOption:hover {
+    border: 2px solid #000;
+}

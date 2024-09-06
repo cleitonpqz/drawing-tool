@@ -1,100 +1,48 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Head from "next/head";
+import Canvas from "@/components/canvas";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-
-      <div className={styles.code}>
-        <p>Frontend Engineer Take Home Project</p>
-      </div>
-      
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/classkick.png"
-          alt="Classkick Logo"
-          width={200}
-          height={50}
-          priority
+    <>
+      {/* Adding meta tags for SEO and better accessibility */}
+      <Head>
+        <title>Drawing App</title>
+        <meta
+          name="description"
+          content="A simple web-based drawing app built with Next.js"
         />
-      </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-      </div>
-
-      <br></br>
-
-      <div className={styles.description}>
-        <p>
-          Details of project requirements are at:&nbsp;
-          <code className={styles.code}>README.md</code>
-        </p>
-      </div>
-
-      <br></br>
-
-      <div className={styles.grid}>
-        <div className={styles.card}>
-          <h2>
-            Motivation <span>-&gt;</span>
-          </h2>
-          <p>At Classkick, our teachers and students LOVE using our 
-            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial"> Canvas </a> 
-            feature to create fun and engaging content. <br></br><br></br>
-            This project emulates the type of scenarios we face at Classkick, with similar technical challenges regarding UI and real-time UX.
+      <main className={styles.main}>
+        {/* Title and app header */}
+        <header className={styles.header}>
+          <h1 className={styles.title}>Drawing App</h1>
+          <p className={styles.description}>
+            A simple and fun way to draw online. Start creating your art!
           </p>
-        </div>
+        </header>
 
-        <div className={styles.card}>
-          <h2>
-            Goals <span>-&gt;</span>
-          </h2>
-          <p>Your task is to create Canvas element to:<br></br><br></br>
-            - Create a `Drawing` <br></br>
-            - Create a `Textbox` <br></br>
-            - Add an `Eraser Tool`
-          </p>
-        </div>
+        {/* Add a container for the canvas with responsive design */}
+        <section className={styles.canvasContainer}>
+          <Canvas />
+        </section>
 
-        <div className={styles.card}>
-          <h2>
-            Requirements <span>-&gt;</span>
-          </h2>
+        {/* Add a footer for app information or links */}
+        <footer className={styles.footer}>
           <p>
-            - Your app does NOT have to be hooked up to a backend and thus it does NOT have to preserve state. <br></br><br></br>
-            - It should be clear in your code and/or documentation on areas of design and technical decisions <br></br><br></br>
-            - Create components as you feel is best suited for your solution. <br></br>
+            Created by{" "}
+            <a href="https://www.linkedin.com/in/cleitonpqz" target="blank">
+              Cleiton Queiroz
+            </a>{" "}
+            &bull;{" "}
+            <a href="https://github.com/cleitonpqz/drawing-tool" target="blank">
+              GitHub repo
+            </a>
           </p>
-        </div>
-
-        <div className={styles.card}>
-          <h2>
-            Helpful links <span>-&gt;</span>
-          </h2>
-          <p>
-            - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial"> Canvas API </a><br></br><br></br>
-            - <a href='https://react.dev/learn/start-a-new-react-project#nextjs'>React/Next JS Tutorial</a> <br></br>
-          </p>
-        </div>
-      </div>
-
-      <br></br><br></br>
-      <h3>Mock &nbsp;</h3>
-      <div className={styles.center}>
-        
-        <Image
-          src="/classkick-take-home.png"
-          alt="Classkick Take Home"
-          width={450}
-          height={350}
-          priority
-        />
-      </div>
-    </main>
-  )
+        </footer>
+      </main>
+    </>
+  );
 }

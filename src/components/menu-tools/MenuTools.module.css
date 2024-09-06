@@ -1,0 +1,68 @@
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    /* Light background */
+    border-radius: 8px;
+}
+
+.toolButton {
+    /* White background */
+    border: 2px solid #e0e0e0;
+    /* Light border */
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toolButton:hover {
+    background-color: #f0f0f0e3;
+    /* Slightly darker on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.toolButtonActive {
+    background-color: #d1d1d1;
+    /* Active state background */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow when active */
+}
+
+.colorTool {
+    position: relative;
+}
+
+.colorDropdown {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 10;
+}
+
+.colorOption {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.colorOption:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
