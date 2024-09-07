@@ -61,10 +61,11 @@ const ColorToolButton: React.FC<ColorToolButtonProps> = ({
         label="Color"
       />
       {showPalette && (
-        <div className={styles.colorDropdown}>
+        <div className={styles.colorDropdown} data-testid="color-palette">
           {colors.map((col) => (
             <div
               key={col}
+              data-testid={`color-option-${col}`}
               className={styles.colorOption}
               style={{ backgroundColor: col }}
               onClick={() => handleColorSelect(col)}

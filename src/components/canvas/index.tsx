@@ -108,6 +108,7 @@ const Canvas = () => {
       />
       <canvas
         ref={canvasRef}
+        data-testid="drawing-canvas"
         onMouseDown={tool === "textbox" ? openTextModal : startDrawing}
         onMouseMove={draw}
         onMouseUp={stopDrawing}

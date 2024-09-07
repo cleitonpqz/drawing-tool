@@ -1,12 +1,3 @@
-// export const initialState = {
-//   tool: "pencil",
-//   color: "black",
-//   isDrawing: false,
-//   context: null,
-//   modalOpen: false,
-//   textPosition: null,
-// };
-
 // Define all available tools
 export type Tool = "pencil" | "eraser" | "textbox";
 
